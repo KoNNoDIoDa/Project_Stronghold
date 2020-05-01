@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D rigidbody2d;
     public float horizontalMove;
     public float verticalMove;
+    bool lamp;
+    int lampCount = 0;
 
     private void Start()
     {
@@ -19,8 +21,33 @@ public class PlayerMovement : MonoBehaviour
     {
         horizontalMove = Input.GetAxis("Horizontal");
 
-        animator.SetFloat("Speed", math.abs(horizontalMove));
+        if (Input.GetButtonUp("Lamp")) 
+        {
+            lampCount++;
+        }
 
+        if (lampCount == 1)
+        {
+            lamp = true;
+        }
+
+        if (lampCount > 1)
+        {
+            lamp = false;
+            lampCount = 0;
+        }
+
+        if (lampCount == 0)
+        {
+            lamp = false;
+        }
+      
+
+        animator.SetFloat("SpeedH", horizontalMove);
+        animator.SetFloat("SpeedV", verticalMove);
+        animator.SetBool("Lamp", lamp);
+
+        if (Input.GetAxis("Vertical"))
         verticalMove = Input.GetAxis("Vertical");
         
     }
