@@ -43,7 +43,7 @@ Material:
     m_Floats:
     - _EnableExternalAlpha: 0
     m_Colors:
-    - Color_DB43EDF2: {r: 0, g: 0.008318903, b: 0.14419432, a: 0}
+    - Color_DB43EDF2: {r: 0.47140452, g: 0.58232325, b: 0.9649928, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Flip: {r: 1, g: 1, b: 1, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
