@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 209035230097963368}
   - component: {fileID: 6563362900051487541}
   - component: {fileID: 7837267439340153407}
+  - component: {fileID: 5838854582988129626}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -119,3 +120,20 @@ CircleCollider2D:
   m_Offset: {x: 0.013330102, y: -1.1707025}
   serializedVersion: 2
   m_Radius: 0.9500518
+--- !u!114 &5838854582988129626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7574456570351089118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bb8a99bb9e6142459cdc671e5f2b9d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  opened: 0
+  anim: {fileID: 6563362900051487541}
+  destination: 
+  input: 0
+  inv: {fileID: 0}

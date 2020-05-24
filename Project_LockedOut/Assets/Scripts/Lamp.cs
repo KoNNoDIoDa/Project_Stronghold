@@ -5,14 +5,11 @@ using UnityEngine;
 public class Lamp : MonoBehaviour
 {
 
-    bool lamp;
+    bool lamp = false;
     public Animator animator;
-    int lampCount = 0;
     public GameObject glow;
     public PlayerMovement mov;
 
-    Vector2 a;
-    public float b;
 
     private void Start()
     {
@@ -21,34 +18,18 @@ public class Lamp : MonoBehaviour
 
     void Update()
     {
-        if (!lamp)
-        {
-            glow.SetActive(false);
-        }
-        else
-        {
-            glow.SetActive(true);
-        }
-
         if (Input.GetButtonUp("Lamp"))
         {
-            lampCount++;
-        }
-
-        if (lampCount == 1)
-        {
-            lamp = true;
-        }
-
-        if (lampCount > 1)
-        {
-            lamp = false;
-            lampCount = 0;
-        }
-
-        if (lampCount == 0)
-        {
-            lamp = false;
+            if (!lamp)
+            {
+                glow.SetActive(true);
+                lamp = true;
+            }
+            else
+            {
+                glow.SetActive(false);
+                lamp = false;
+            }
         }
 
         
