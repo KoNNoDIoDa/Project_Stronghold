@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D rigidbody2d;
     public float horizontalMove;
     public float verticalMove;
+    public bool move;
     
 
     private void Start()
@@ -18,21 +19,33 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        horizontalMove = Input.GetAxisRaw("Horizontal");
+        if (move)
+        {
+            horizontalMove = Input.GetAxisRaw("Horizontal");
+            verticalMove = Input.GetAxisRaw("Vertical");
+        }
+        if (!move)
+        {
+            horizontalMove = 0;
+            verticalMove = 0;
+        }
 
-        animator.SetFloat("SpeedH", horizontalMove);
-        animator.SetFloat("SpeedV", verticalMove);
-
-        verticalMove = Input.GetAxisRaw("Vertical");
+       
+            animator.SetFloat("SpeedH", horizontalMove);
+            animator.SetFloat("SpeedV", verticalMove);
 
     }
 
     private void FixedUpdate()
     {
-        Vector2 position = rigidbody2d.position;
-        position.x = position.x + 3.0f * horizontalMove * Time.deltaTime;
-        position.y = position.y + 3.0f * verticalMove * Time.deltaTime;
+       // if (move)
+       // {
+            Vector2 position = rigidbody2d.position;
+            position.x = position.x + 3.0f * horizontalMove * Time.deltaTime;
+            position.y = position.y + 3.0f * verticalMove * Time.deltaTime;
 
-        rigidbody2d.MovePosition(position);
+            rigidbody2d.MovePosition(position);
+       // }
+        
     }
 }

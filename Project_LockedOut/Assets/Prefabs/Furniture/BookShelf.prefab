@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 7858889364183948538}
   - component: {fileID: 545931721219421520}
   - component: {fileID: 8324552687133708936}
+  - component: {fileID: 7099540793780777441}
   m_Layer: 0
   m_Name: BookShelf
   m_TagString: Untagged
@@ -139,7 +140,7 @@ MonoBehaviour:
   - {x: -1.0152272, y: 0.74587274, z: 0}
   m_ShapePathHash: -176481343
   m_Mesh: {fileID: 0}
-  m_InstanceId: 95586
+  m_InstanceId: 25796
 --- !u!95 &545931721219421520
 Animator:
   serializedVersion: 3
@@ -185,3 +186,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.8038187, y: 0.9515133}
   m_EdgeRadius: 0
+--- !u!114 &7099540793780777441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3554520279367869428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da5a4b45115ee44419c64be26d9f2b37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drop: {fileID: 0}
+  inv: {fileID: 0}
+  sl: {fileID: 0}
+  canv: {fileID: 0}
+  anim: {fileID: 0}
+  mov: {fileID: 0}

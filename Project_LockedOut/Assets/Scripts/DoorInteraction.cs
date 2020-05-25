@@ -22,11 +22,17 @@ public class DoorInteraction : MonoBehaviour
             if (Input.GetButtonDown("Interaction") && opened)
             {
                 SceneManager.LoadScene(destination);
+                inv.items[i] = null;
+                inv.invSlots[i].sprite = inv.def;
             }
             if(inv == null && input == null)
             {
                 opened = true;
             }
+            //if(destination == null && input == null && inv == null)
+            //{
+
+            //}
         }
         anim.SetBool("Opened", opened);
         

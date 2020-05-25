@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2960239410773864255}
   - component: {fileID: 6823502048542901782}
   - component: {fileID: 8161001030368526832}
+  - component: {fileID: 516934005672028028}
   m_Layer: 0
   m_Name: Chest
   m_TagString: Untagged
@@ -156,7 +157,7 @@ MonoBehaviour:
   - {x: -0.35890424, y: -0.34905005, z: 0}
   m_ShapePathHash: 318313661
   m_Mesh: {fileID: 0}
-  m_InstanceId: 95766
+  m_InstanceId: 25828
 --- !u!61 &8161001030368526832
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -183,3 +184,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7686819, y: 0.63204384}
   m_EdgeRadius: 0
+--- !u!114 &516934005672028028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3436622482741396449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da5a4b45115ee44419c64be26d9f2b37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drop: {fileID: 0}
+  inv: {fileID: 0}
+  sl: {fileID: 0}
+  canv: {fileID: 0}
+  anim: {fileID: 0}
+  mov: {fileID: 0}
