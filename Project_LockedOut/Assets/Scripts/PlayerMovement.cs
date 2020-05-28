@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D rigidbody2d;
     public float horizontalMove;
     public float verticalMove;
-    public bool move;
+    public bool move = true;
     
 
     private void Start()
@@ -26,8 +26,8 @@ public class PlayerMovement : MonoBehaviour
         }
         if (!move)
         {
-            horizontalMove = 0;
-            verticalMove = 0;
+            horizontalMove = 0f;
+            verticalMove = 0f;
         }
 
        

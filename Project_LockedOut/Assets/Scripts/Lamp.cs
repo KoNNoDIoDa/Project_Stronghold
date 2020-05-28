@@ -9,6 +9,7 @@ public class Lamp : MonoBehaviour
     public Animator animator;
     public GameObject glow;
     public PlayerMovement mov;
+    public bool active = false;
 
 
     private void Start()
@@ -18,7 +19,7 @@ public class Lamp : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonUp("Lamp"))
+        if (Input.GetButtonUp("Lamp") && active)
         {
             if (!lamp)
             {
